@@ -1,0 +1,15 @@
+<%- include("partials/header"); %>
+<div class="container-fluid">
+  <form action="/compose" method="post">
+    <div class="form-group">
+      <label for="titleInput">Title</label>
+      <input type="text" class="form-control" id="title" name="title" placeholder="Title">
+    </div>
+    <div class="form-group">
+      <label for="text">Post</label>
+      <textarea class="form-control" id="content" name="content" rows="7" placeholder="Post"></textarea>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+<%- include("partials/footer"); %>

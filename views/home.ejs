@@ -1,0 +1,31 @@
+<%- include("partials/header"); %>
+<div class="container-fluid">
+  <div class="block">
+    <h1><%= content.main.title %></h1>
+    <p><%= content.main.text %></p>
+  </div>
+  <% for (post of content.posts) { %>
+  <div class="block">
+    <h3 class="post-title"><%= post.title %></h3>
+    <small class="text-muted post-date"><%= post.date.toLocaleString() %></small>
+    <p class="post-content"><%= post.content %>
+      <% if (post.content.endsWith("...")) { %>
+      <a href="/posts/<%= post._id %>">Read more</a>
+      <% } %>
+    </p>
+  </div>
+  <hr>
+  <% } %>
+  <div id="page-scroller">
+    <p>
+    <% if (content.info.totalPages > 1) { %>
+    <% for (let i = 1; i <= content.info.totalPages; i++) { %>
+    <% if (i == content.info.currentPage) { %>
+    <%= i %>
+    <% } else { %>
+    <a href="/<%=i%>"><%=i%></a>
+    <% } } }%>
+    </p>
+  </div>
+</div>
+<%- include("partials/footer"); %>
