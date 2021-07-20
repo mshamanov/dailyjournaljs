@@ -1,5 +1,5 @@
 # Daily Journal
 HTML + CSS + JavaScript (Node JS) + MongoDB
 
-### Link:
+### Live link:
 https://dailyjournaljs.herokuapp.com
